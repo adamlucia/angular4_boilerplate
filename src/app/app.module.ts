@@ -15,6 +15,7 @@ import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.com
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 import { WindowRefService } from './window-ref.service';
+import { LandscapeOverlayComponent } from './landscape-overlay/landscape-overlay.component';
 
 
 const routes: Routes = [
@@ -50,7 +51,8 @@ const routes: Routes = [
         ShareComponent,
         GeolocationComponent,
         TermsOfServiceComponent,
-        PrivacyPolicyComponent
+        PrivacyPolicyComponent,
+        LandscapeOverlayComponent
     ],
     imports: [
         BrowserModule,
