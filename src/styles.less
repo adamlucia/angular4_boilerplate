@@ -9,12 +9,12 @@
 //* * * * * * * * * { outline: 1px solid blue }
 
 .btn-social-icon {
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 }
 .btn-social-icon>:first-child {
-    line-height: 60px;
-    font-size: 2.5em;
+    line-height: 50px;
+    font-size: 2.0em;
 }
 .rounded {
     border-radius: .50rem!important;
@@ -25,7 +25,7 @@ html{
     color:#fff;
 	height: 100%;
 	overflow-y:hidden;
-    overflow-x:hidden; 
+    overflow-x:hidden;
 
     body {
 		background-color: #3B444B;
@@ -33,39 +33,59 @@ html{
 		height: 100%;
 		overflow-y:hidden;
 		overflow-x:hidden;
-		
+
 		margin-bottom:50px;
-		
+
 		&.scroll {
 			overflow-y: scroll;
 		}
-    }   
+    }
 }
 .pos-f-t {
 	ul {
 		list-style:none;
+		margin-bottom: 0rem;
 	}
 }
 
 .title {
     margin-top: .5em;
 }
+
+.scrollable {
+	overflow-y: scroll;
+	height: 100%;
+	position: relative;
+}
+
 #offer-wrapper {
 	min-height: 60%;
-	
+
 	#offer-image-wrapper {
 	//	width:80%;
 
 		#offer-image {
 			background-size: 100% 100%;
     	}
-	}	
+
+	}
+	#offer-text {
+		h5 {
+			margin-bottom: 0rem;
+		}
+		h4 {
+			margin-bottom: .2rem;
+		}
+		p {
+			margin-bottom: .2rem;
+		}
+	}
 	#description-one {
 		text-align:center;
-	}	
+	}
 	#description-two {
 		text-align:center;
-	}	
+	}
 	#offer-actions {
 
 	}

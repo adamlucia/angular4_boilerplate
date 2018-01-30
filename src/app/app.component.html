@@ -1,6 +1,5 @@
 <app-geolocation></app-geolocation>
 <app-nav></app-nav>
-{{this.route}}
-<div [ngStyle]="{'overflow-y: this.route == '/terms-of-service' ? 'hidden':'scroll'}">
+<div [ngClass]="{'scrollable': this.route?.match('/terms-of-service|/privacy-policy')}">
 	<router-outlet></router-outlet>
 </div>

@@ -13,8 +13,10 @@ export class GeolocationComponent implements OnInit {
    		if(navigator.geolocation){
       		navigator.geolocation.getCurrentPosition(position => {
         		this.location = position.coords;
-        		console.log(position.coords); 
+        		console.log(position.coords);
       		});
-   		}
+   		} else {
+            console.log('Geo location not accepted or working');
+        }
  	}
 }

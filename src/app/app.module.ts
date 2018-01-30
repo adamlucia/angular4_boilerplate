@@ -1,8 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -41,30 +43,32 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    OfferComponent,
-    ShareComponent,
-    GeolocationComponent,
-    TermsOfServiceComponent,
-    PrivacyPolicyComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-	RouterModule.forRoot(
-        routes,
-		{ 
-			enableTracing: true,
-			useHash:true
-		}
-     )
-  ],
-	providers:[
-       WindowRefService 
+    declarations: [
+        AppComponent,
+        NavComponent,
+        OfferComponent,
+        ShareComponent,
+        GeolocationComponent,
+        TermsOfServiceComponent,
+        PrivacyPolicyComponent
     ],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        RouterModule.forRoot(
+            routes,
+        	{
+        		enableTracing: true,
+        		useHash:true
+        	}
+        ),
+        BrowserModule,
+        BrowserAnimationsModule
+    ],
+    providers:[
+       WindowRefService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

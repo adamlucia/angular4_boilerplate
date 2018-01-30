@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { WindowRefService } from './window-ref.service';
@@ -13,13 +13,27 @@ import { WindowRefService } from './window-ref.service';
 export class AppComponent implements OnInit {
   	title = 'app works!';
   	route: string;
-	private _window: Window;
-    constructor (windowRef: WindowRefService) {
-        this._window = windowRef.nativeWindow;
-		this._window.scrollTo(0, 1);
+	_window: Window;
 
-		this.route = this._window.location.pathname;
+    constructor (location: Location, router: Router, windowRef: WindowRefService) {
+        router.events.subscribe((val) => {
+            if(location.path() != '') {
+                this.route = location.path();
+            } else {
+                this.route = 'Home' }
+            }
+        );
+
+        this._window = windowRef.nativeWindow;
+		//this.route = this._window.location.pathname;
     }
-  ngOnInit() {
-  }
+    ngOnInit() {
+
+    }
+    ngAfterViewInit() {
+        setTimeout(() => {
+          console.log('scrolling to top!');
+          this._window.scrollTo(0,1);
+        }, 1);
+    }
 }
