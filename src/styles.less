@@ -1,0 +1,87 @@
+//outline test code
+//* { outline: 2px dotted red }
+//* * * { outline: 2px dotted green }
+//* * * * { outline: 2px dotted orange }
+//* * * * * { outline: 2px dotted blue }
+//* * * * * * { outline: 1px solid red }
+//* * * * * * * { outline: 1px solid green }
+//* * * * * * * * { outline: 1px solid orange }
+//* * * * * * * * * { outline: 1px solid blue }
+
+.btn-social-icon {
+	width: 60px;
+	height: 60px;
+}
+.btn-social-icon>:first-child {
+    line-height: 60px;
+    font-size: 2.5em;
+}
+.rounded {
+    border-radius: .50rem!important;
+}
+
+html{
+    background-color: #3B444B;
+    color:#fff;
+	height: 100%;
+	overflow-y:hidden;
+    overflow-x:hidden; 
+
+    body {
+		background-color: #3B444B;
+		color: #fff;
+		height: 100%;
+		overflow-y:hidden;
+		overflow-x:hidden;
+		
+		margin-bottom:50px;
+		
+		&.scroll {
+			overflow-y: scroll;
+		}
+    }   
+}
+.pos-f-t {
+	ul {
+		list-style:none;
+	}
+}
+
+.title {
+    margin-top: .5em;
+}
+#offer-wrapper {
+	min-height: 60%;
+	
+	#offer-image-wrapper {
+	//	width:80%;
+
+		#offer-image {
+			background-size: 100% 100%;
+    	}
+	}	
+	#description-one {
+		text-align:center;
+	}	
+	#description-two {
+		text-align:center;
+	}	
+	#offer-actions {
+
+	}
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
