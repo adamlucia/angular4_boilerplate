@@ -35,10 +35,6 @@ html{
 		overflow-x:hidden;
 
 		margin-bottom:50px;
-
-		&.scroll {
-			overflow-y: scroll;
-		}
     }
 }
 .pos-f-t {
@@ -77,7 +73,10 @@ html{
 			margin-bottom: .2rem;
 		}
 		p {
-			margin-bottom: .2rem;
+			margin-bottom: .5rem;
+		}
+		.date {
+			font-size: .6em;
 		}
 	}
 	#description-one {
@@ -88,6 +87,10 @@ html{
 	}
 	#offer-actions {
 
+	}
+
+	#share-btn-container {
+		max-width: 200px;
 	}
 }
 
@@ -107,12 +110,33 @@ html{
 @media (min-width: 1200px) {  }
 
  @media screen and (orientation:landscape) {
-	 body {
-		 display: none;
-	 }
+	// body {
+	//  display: none;
+	// }
+	.mx-auto {
+		margin: 0em;
+	}
+	.text-center {
+		text-align: left;
+	}
+	.fixed-bottom {
+		position: relative;
+		margin-bottom: 0px !important;
+	}
+
+	#offer-wrapper {
+		 #offer-text {
+			 h5 {
+				 margin-bottom: .4rem;
+			 }
+
+		 }
+	}
+
+
 	 .orientation-window {
 		 .fadeMe {
-			 opacity:    0.9; 
+			 opacity:    0.9;
 		   	 background: #000;
 		   	 width:      100%;
 		   	 height:     100%;
@@ -121,8 +145,5 @@ html{
 		   	 left:       0;
 		   	 position:   fixed;
 		 }
-
-	} {
-		 display:
-	 }
+	}
  }
