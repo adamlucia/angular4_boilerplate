@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
@@ -15,7 +15,11 @@ import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.com
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 import { WindowRefService } from './window-ref.service';
-import { LandscapeOverlayComponent } from './landscape-overlay/landscape-overlay.component';
+import { OfferService } from './offer.service';
+// import { LandscapeOverlayComponent } from './landscape-overlay/landscape-overlay.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 const routes: Routes = [
@@ -52,7 +56,7 @@ const routes: Routes = [
         GeolocationComponent,
         TermsOfServiceComponent,
         PrivacyPolicyComponent,
-        LandscapeOverlayComponent
+        //LandscapeOverlayComponent
     ],
     imports: [
         BrowserModule,
@@ -66,10 +70,11 @@ const routes: Routes = [
         	}
         ),
         BrowserModule,
-        BrowserAnimationsModule
+        HttpClientModule
     ],
     providers:[
-       WindowRefService
+       WindowRefService,
+       OfferService
     ],
     bootstrap: [AppComponent]
 })
