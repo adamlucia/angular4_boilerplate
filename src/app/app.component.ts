@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { WindowRefService } from './window-ref.service';
+import { OfferService } from './offer.service';
 
 
 @Component({
@@ -11,11 +12,12 @@ import { WindowRefService } from './window-ref.service';
   	styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  	title = 'app works!';
   	route: string;
 	_window: Window;
+    //offerService: OfferService;
+    offer: Offer[];
 
-    constructor (location: Location, router: Router, windowRef: WindowRefService) {
+    constructor (location: Location, router: Router, windowRef: WindowRefService, private offerService: OfferService) {
         router.events.subscribe((val) => {
             if(location.path() != '') {
                 this.route = location.path();
@@ -26,9 +28,14 @@ export class AppComponent implements OnInit {
 
         this._window = windowRef.nativeWindow;
 		//this.route = this._window.location.pathname;
+        this.offerService = offerService;
     }
     ngOnInit() {
+        this.getOffer();
+    }
 
+    getOffer(): void {
+      this.offerService.getOffer().subscribe(offer => this.offer = offer);
     }
     ngAfterViewInit() {
         setTimeout(() => {
