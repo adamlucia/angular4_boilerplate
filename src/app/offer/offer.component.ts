@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   	selector: 'app-offer',
   	templateUrl: './offer.component.html',
 	styleUrls: ['./offer.component.css'],
-  	styles: ['body { overflox-y:scroll !important; }']
+  	styles: []
 })
 export class OfferComponent implements OnInit {
 
